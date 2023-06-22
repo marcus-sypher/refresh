@@ -11,7 +11,7 @@ EOL
 sudo chmod +x ~/.scripts/refre.sh
 
 crontab -l > mycron
-echo "@daily ~/.scripts/refre.sh" >> mycron
+echo "0 4 * * * ~/.scripts/refre.sh" >> mycron
 crontab mycron
 rm mycron
 
@@ -19,5 +19,5 @@ echo "Crontab reads:"
 crontab -l
 echo ""
 
-echo "Preloading complete. Device will restart every night at midnight if Firefox is not open.\nNo further interaction is required."
+echo "Preloading complete. Device will restart every night at 04:00 if Firefox is not open.\nNo further interaction is required."
 rm preload.sh 
